@@ -1,0 +1,14 @@
+from googletrans import Translator
+
+def traduzir_texto(texto, destino):
+    translator = Translator()
+    traducao = translator.translate(texto, dest=destino)
+    return traducao.text
+
+texto_original = input("Digite o texto que deseja traduzir: ")
+idioma_destino = input("Digite o código do idioma de destino (por exemplo, 'en' para inglês): ")
+
+texto_traduzido = traduzir_texto(texto_original, idioma_destino)
+print("Texto Traduzido:", texto_traduzido)
+
+#Nos comentários deixarei uma lista com as siglas para facilitar em qual língua você deseja escolher para traduzir
